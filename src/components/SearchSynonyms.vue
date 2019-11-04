@@ -1,5 +1,5 @@
 <template>
-  <form>
+  <form @submit="search">
     <input type="text" name="synonym" placeholder="Search synonym" />
     <button>Submit</button>
   </form>
@@ -12,6 +12,11 @@ export default {
     return {
       synonym: ""
     };
+  },
+  methods: {
+    search(e) {
+      e.preventDefault();
+    }
   }
 };
 </script>
