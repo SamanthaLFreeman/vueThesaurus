@@ -1,16 +1,19 @@
 <template>
   <div id="app">
     <Header />
+    <SearchSynonyms />
   </div>
 </template>
 
 <script>
 import Header from "./components/Header";
+import SearchSynonyms from "./components/SearchSynonyms";
 
 export default {
   name: "app",
   components: {
-    Header
+    Header,
+    SearchSynonyms
   }
 };
 </script>
