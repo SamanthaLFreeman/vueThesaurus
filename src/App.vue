@@ -16,9 +16,14 @@ export default {
     Header,
     SearchSynonyms
   },
+  data() {
+    return {
+      synonyms: []
+    };
+  },
   methods: {
     displaySynonym(synonym) {
-      getSearchedSynonym(synonym).then(data => console.log(data));
+      getSearchedSynonym(synonym).then(data => (this.synonyms = data));
     }
   }
 };
