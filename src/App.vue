@@ -2,6 +2,7 @@
   <div id="app">
     <Header />
     <SearchSynonyms v-on:display-synonym="displaySynonym" />
+    <SynonymsContainer />
   </div>
 </template>
 
@@ -9,12 +10,14 @@
 import { getSearchedSynonym } from "./util/apiCalls";
 import Header from "./components/Header";
 import SearchSynonyms from "./components/SearchSynonyms";
+import SynonymsContainer from "./components/SynonymsContainer";
 
 export default {
   name: "app",
   components: {
     Header,
-    SearchSynonyms
+    SearchSynonyms,
+    SynonymsContainer
   },
   data() {
     return {
