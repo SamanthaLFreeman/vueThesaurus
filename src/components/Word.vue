@@ -6,7 +6,7 @@
       <li>{{def}}</li>
     </ul>
     <div v-bind:key="synonym" v-for="synonym in word.meta.syns.flat()">
-      <button>{{synonym}}</button>
+      <button @click="$emit('display-word', synonym)">{{synonym}}</button>
     </div>
   </article>
 </template>
@@ -19,9 +19,5 @@ export default {
 </script>
 
 <style scoped>
-.word {
-  padding: 20px;
-  text-align: center;
-}
 </style>
 

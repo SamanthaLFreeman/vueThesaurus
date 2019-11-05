@@ -2,7 +2,7 @@
   <div id="app">
     <Header />
     <SearchWord v-on:display-word="displayWord" />
-    <WordsContainer v-bind:words="words" />
+    <WordsContainer v-bind:words="words" v-on:display-word="displayWord" />
   </div>
 </template>
 
