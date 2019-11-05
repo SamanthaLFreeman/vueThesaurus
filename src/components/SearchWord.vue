@@ -28,6 +28,7 @@ export default {
 form {
   display: flex;
   flex-direction: column;
+  height: 15vh;
   margin: auto;
   width: 400px;
 }
