@@ -1,24 +1,24 @@
 <template>
   <form @submit="search">
-    <input type="text" name="synonym" placeholder="Search synonym" v-model="synonym" />
+    <input type="text" name="word" placeholder="Search word" v-model="word" />
     <button>Submit</button>
   </form>
 </template>
 
 <script>
 export default {
-  name: "SearchSynonyms",
+  name: "SearchWord",
   data() {
     return {
-      synonym: ""
+      word: ""
     };
   },
   methods: {
     search(e) {
       e.preventDefault();
 
-      this.$emit("display-synonym", this.synonym);
-      this.synonym = "";
+      this.$emit("display-word", this.word);
+      this.word = "";
     }
   }
 };
