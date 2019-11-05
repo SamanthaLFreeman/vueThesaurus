@@ -12,6 +12,7 @@ export default {
 
 <style scoped>
 .header {
+  height: 15vh;
   padding: 20px;
 }
 
