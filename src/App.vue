@@ -58,7 +58,7 @@ export default {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Courier;
   line-height: 1.4;
 }
 </style>

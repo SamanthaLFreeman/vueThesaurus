@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <h1>Thesaurus</h1>
+    <h1>Thesaurus.</h1>
   </header>
 </template>
 
@@ -11,4 +11,11 @@ export default {
 </script>
 
 <style scoped>
+.header {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 4em;
+}
 </style>
