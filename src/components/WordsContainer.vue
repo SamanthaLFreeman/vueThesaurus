@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div v-bind:key="word.id" v-for="word in synonyms">
+    <div v-bind:key="word.id" v-for="word in words">
       <Word v-bind:word="word" />
     </div>
   </section>
@@ -9,11 +9,11 @@
 <script>
 import Word from "./Word";
 export default {
-  name: "SynonymsContainer",
+  name: "WordsContainer",
   components: {
     Word
   },
-  props: ["synonyms"]
+  props: ["words"]
 };
 </script>
 

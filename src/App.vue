@@ -1,32 +1,32 @@
 <template>
   <div id="app">
     <Header />
-    <SearchSynonyms v-on:display-synonym="displaySynonym" />
-    <SynonymsContainer v-bind:synonyms="synonyms" />
+    <SearchWord v-on:display-word="displayWord" />
+    <WordsContainer v-bind:words="words" />
   </div>
 </template>
 
 <script>
 import { getSearchedSynonym } from "./util/apiCalls";
 import Header from "./components/Header";
-import SearchSynonyms from "./components/SearchSynonyms";
-import SynonymsContainer from "./components/SynonymsContainer";
+import SearchWord from "./components/SearchWord";
+import WordsContainer from "./components/WordsContainer";
 
 export default {
   name: "app",
   components: {
     Header,
-    SearchSynonyms,
-    SynonymsContainer
+    SearchWord,
+    WordsContainer
   },
   data() {
     return {
-      synonyms: []
+      words: []
     };
   },
   methods: {
-    displaySynonym(synonym) {
-      getSearchedSynonym(synonym).then(data => (this.synonyms = data));
+    displayWord(word) {
+      getSearchedSynonym(word).then(data => (this.words = data));
     }
   }
 };
