@@ -26,7 +26,25 @@ export default {
   },
   methods: {
     displayWord(word) {
-      getSearchedSynonym(word).then(data => (this.words = data));
+      getSearchedSynonym(word)
+        .then(data => this.cleanData(data))
+        .then(data => (this.words = data));
+    },
+    cleanData(data) {
+      return data.map(el => {
+        return {
+          name: el.meta.id,
+          type: el.fl,
+          definition: el.shortdef,
+          syns: el.meta.syns
+            .flat()
+            .reduce(
+              (unique, synonym) =>
+                unique.includes(synonym) ? unique : [...unique, synonym],
+              []
+            )
+        };
+      });
     }
   }
 };
