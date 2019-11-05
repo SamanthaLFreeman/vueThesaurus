@@ -61,4 +61,15 @@ body {
   font-family: Courier;
   line-height: 1.4;
 }
+
+button {
+  background-color: #fbcb458f;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #000;
+  color: #fbcb45;
+}
 </style>
