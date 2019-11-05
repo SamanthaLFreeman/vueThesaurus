@@ -2,7 +2,7 @@
   <div id="app">
     <Header />
     <SearchSynonyms v-on:display-synonym="displaySynonym" />
-    <SynonymsContainer />
+    <SynonymsContainer v-bind:synonyms="synonyms" />
   </div>
 </template>
 

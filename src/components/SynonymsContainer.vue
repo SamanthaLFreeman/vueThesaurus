@@ -4,7 +4,8 @@
 
 <script>
 export default {
-  name: "SynonymsContainer"
+  name: "SynonymsContainer",
+  props: ["synonyms"]
 };
 </script>
 
