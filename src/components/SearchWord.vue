@@ -1,7 +1,7 @@
 <template>
   <form @submit="search">
     <input type="text" name="word" placeholder="Search word..." v-model="word" />
-    <button>Submit</button>
+    <button :disabled="!word">Submit</button>
   </form>
 </template>
 
@@ -43,5 +43,11 @@ button {
 input {
   margin-bottom: 10px;
   text-align: center;
+}
+
+button:disabled:hover {
+  background-color: #fbcb458f;
+  color: #00000050;
+  cursor: not-allowed;
 }
 </style>
