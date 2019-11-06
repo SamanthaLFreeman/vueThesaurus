@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header />
-    <SearchWord v-on:display-word="displayWord" />
+    <SearchWord v-on:display-word="displayWord" v-bind:error="error" v-on:clear-error="clearError" />
     <WordsContainer v-bind:words="words" v-on:display-word="displayWord" />
   </div>
 </template>
@@ -21,14 +21,16 @@ export default {
   },
   data() {
     return {
-      words: []
+      words: [],
+      error: ""
     };
   },
   methods: {
     displayWord(word) {
       getSearchedSynonym(word)
         .then(data => this.cleanData(data))
-        .then(data => (this.words = data));
+        .then(data => (this.words = data))
+        .catch(() => (this.error = "Cannot find word, please enter another."));
     },
     cleanData(data) {
       return data.map(el => {
@@ -45,6 +47,9 @@ export default {
             )
         };
       });
+    },
+    clearError() {
+      this.error = "";
     }
   }
 };

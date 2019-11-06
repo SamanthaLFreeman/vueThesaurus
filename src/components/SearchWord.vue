@@ -2,6 +2,7 @@
   <form @submit="search">
     <input type="text" name="word" placeholder="Search word..." v-model="word" />
     <button :disabled="!word">Submit</button>
+    <p class="error" v-if="error">{{error}}</p>
   </form>
 </template>
 
@@ -13,12 +14,14 @@ export default {
       word: ""
     };
   },
+  props: ["error"],
   methods: {
     search(e) {
       e.preventDefault();
 
       this.$emit("display-word", this.word);
       this.word = "";
+      this.$emit("clear-error");
     }
   }
 };
