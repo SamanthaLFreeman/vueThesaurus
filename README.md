@@ -9,6 +9,10 @@ A take home challenge, where I was expected to create a single-page application 
 3. Run `npm install` to install dependencies
 4. Run `npm run serve` to view on localhost:8080
 
+### Deployed Link
+
+[Link to deployed application](https://vue-thesaurus.herokuapp.com/)
+
 ### Screenshots
 
 ![image](https://user-images.githubusercontent.com/45364533/68264835-73746380-0007-11ea-9853-103a7afde723.png)
