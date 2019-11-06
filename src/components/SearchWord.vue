@@ -53,4 +53,12 @@ button:disabled:hover {
   color: #00000050;
   cursor: not-allowed;
 }
+
+.error {
+  color: #c70202;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  padding-top: 5px;
+  text-align: center;
+}
 </style>
